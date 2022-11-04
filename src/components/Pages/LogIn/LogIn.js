@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import img from '../../../assets/images/login/login.svg'
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 const LogIn = () => {
-    const {providerLogin ,logIn} =useContext(AuthContext);
+    const {providerLogin,logIn} =useContext(AuthContext);
      
     const handleSignIn = event =>{
        
@@ -26,7 +26,7 @@ const LogIn = () => {
     }
 
 
-    const googleProvider =new GoogleAuthProvider();
+    const googleProvider = new GoogleAuthProvider();
 
     const handleLogin = ()=>{
         providerLogin(googleProvider)
