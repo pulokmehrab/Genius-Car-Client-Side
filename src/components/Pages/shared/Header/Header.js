@@ -1,4 +1,3 @@
-import { FOCUSABLE_SELECTOR } from '@testing-library/user-event/dist/utils';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../../assets/logo.svg'
@@ -19,9 +18,10 @@ const Header = () => {
     const menuBar = <>
             <li><Link to="/signup" className="btn btn-primary mx-3">Sign Up</Link></li>
             <li><Link to="/" className="btn btn-primary">Home</Link></li>
+            <li><Link to="/orders" className="btn btn-primary">Orders</Link></li>
 
 
-    { user?.displayName ?
+    { user?.email ?
         <li><Link to="/" className="btn btn-primary mx-3" onClick={handleLogOut}>Log OuT</Link></li>
         :
         <li><Link to="/login" className="btn btn-primary mx-3">Log In</Link></li>
@@ -41,7 +41,7 @@ const Header = () => {
        <div>
         {user?
         <>
-        {user?.displayName}
+        {user?.email}
         <div className="avatar  ">
          <div >
          <img className=" w-12 rounded-full" alt='' src={user?.photoURL} />
