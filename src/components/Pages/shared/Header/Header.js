@@ -22,7 +22,7 @@ const Header = () => {
 
     { user?.email ?
         <>
-        <li><Link to="/" className="btn btn-primary mx-3" onClick={handleLogOut}>Log OuT</Link></li>
+        <li><Link  className="btn btn-primary mx-3" onClick={handleLogOut}>Log OuT</Link></li>
         <li><Link to="/orders" className="btn btn-primary">Orders</Link></li>
         </>
 
