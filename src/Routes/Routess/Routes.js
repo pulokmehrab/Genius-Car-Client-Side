@@ -5,6 +5,7 @@ import SignUp from "../../components/Pages/Home/SignUp/SignUp"
 import LogIn from "../../components/Pages/LogIn/LogIn"
 import Orders from "../../components/Pages/Orders/Orders"
 import Main from "../../layout/Main"
+import PrivateRoute from "../PrivateRote/PrivateRoute"
 
 
 const router = createBrowserRouter([
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/orders',
-        element:<Orders></Orders>
+        element:<PrivateRoute><Orders></Orders></PrivateRoute>
       }
     ]
     }

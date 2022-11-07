@@ -18,11 +18,14 @@ const Header = () => {
     const menuBar = <>
             <li><Link to="/signup" className="btn btn-primary mx-3">Sign Up</Link></li>
             <li><Link to="/" className="btn btn-primary">Home</Link></li>
-            <li><Link to="/orders" className="btn btn-primary">Orders</Link></li>
 
 
     { user?.email ?
+        <>
         <li><Link to="/" className="btn btn-primary mx-3" onClick={handleLogOut}>Log OuT</Link></li>
+        <li><Link to="/orders" className="btn btn-primary">Orders</Link></li>
+        </>
+
         :
         <li><Link to="/login" className="btn btn-primary mx-3">Log In</Link></li>
 
